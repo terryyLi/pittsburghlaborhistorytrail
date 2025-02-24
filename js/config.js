@@ -1,5 +1,5 @@
 // Automatically determine if we're on GitHub Pages or local development
-const BASE_URL = location.hostname === 'terryyLi.github.io' 
+const BASE_URL = location.hostname === 'terryyli.github.io' 
     ? '/pittsburghlaborhistorytrail' 
     : '';
 
