@@ -41,30 +41,80 @@
 
 .footer-top {
     width: 100%;
-    padding: 1.5rem 0;
+    padding: 1.5rem 1rem;
     background: #545F71;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
+    text-align: center;
 }
 
 .footer-top-text {
     max-width: 772px;
-    text-align: center;
     color: #FFF;
     font-family: Ubuntu;
-    font-size: 15px;
+    font-size: clamp(14px, 3vw, 15px);
     font-style: normal;
     font-weight: 300;
-    line-height: normal;
-    padding: 0 1rem;
+    line-height: 1.4;
 }
 
 .footer-bottom {
     width: 100%;
-    padding: 3rem 0;
+    padding: 3rem 1rem;
     background: #D0D5DF;
+}
+
+.footer-title {
+    color: #545F71;
+    font-family: Ubuntu;
+    font-size: clamp(13px, 3vw, 14px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 0.5rem;
+}
+
+.footer-subtitle {
+    color: #545F71;
+    font-family: Ubuntu;
+    font-size: clamp(11px, 3vw, 12px);
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.4;
+    margin-bottom: 2rem;
+}
+
+.footer-section-title,
+.useful-links-title,
+.contact-title {
+    color: #000;
+    font-family: Ubuntu;
+    font-size: clamp(20px, 4vw, 25px);
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+}
+
+.footer-links,
+.useful-links-container,
+.contact-links {
+    margin-bottom: 2rem;
+}
+
+.footer-links a,
+.useful-links-container a,
+.contact-links a {
+    color: #000;
+    font-family: Ubuntu;
+    font-size: clamp(14px, 3vw, 15px);
+    font-style: normal;
+    font-weight: 300;
+    line-height: 2;
+    text-decoration: none;
+    display: block;
 }
 
 .footer-logo-text {
@@ -76,92 +126,6 @@
     font-weight: 700;
     line-height: normal;
     margin-bottom: 1rem;
-}
-
-.footer-title {
-    max-width: 283px;
-    color: #545F71;
-    font-family: Ubuntu;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    margin-bottom: 1rem;
-}
-
-.footer-section-title {
-    color: #000;
-    font-family: Ubuntu;
-    font-size: 25px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
-    margin-bottom: 1rem;
-}
-
-.footer-links {
-    margin-bottom: 2rem;
-}
-
-.footer-links a {
-    color: #000;
-    font-family: Ubuntu;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
-    text-decoration: none;
-    display: block;
-}
-
-.useful-links-title {
-    color: #000;
-    font-family: Ubuntu;
-    font-size: 25px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
-    margin-bottom: 1rem;
-}
-
-.useful-links-container {
-    margin-bottom: 2rem;
-}
-
-.useful-links-container a {
-    color: #000;
-    font-family: Ubuntu;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
-    text-decoration: none;
-    display: block;
-}
-
-.contact-title {
-    color: #000;
-    font-family: Ubuntu;
-    font-size: 25px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
-    margin-bottom: 1rem;
-}
-
-.contact-links {
-    margin-bottom: 2rem;
-}
-
-.contact-links a {
-    color: #000;
-    font-family: Ubuntu;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
-    text-decoration: none;
-    display: block;
 }
 
 .create-tour-text {
@@ -209,20 +173,32 @@
 
 .social-icons {
     display: flex;
-    gap: 20px;
+    gap: 1.5rem;
     align-items: center;
 }
 
 .social-icons a {
     color: #FFF;
-    font-size: 20px;
+    font-size: 1.25rem;
     text-decoration: none;
-    transition: opacity 0.2s;
+    transition: opacity 0.2s ease;
 }
 
 .social-icons a:hover {
     opacity: 0.8;
-    color: #FFF;
+}
+
+@media (max-width: 768px) {
+    .social-icons {
+        justify-content: center;
+        margin: 1rem 0;
+    }
+}
+
+.social-media-container {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
 }
 
 .banner-container {
@@ -249,19 +225,16 @@
     border-radius: 0px 6px 0px 0px;
     background: rgba(235, 197, 106, 0.84);
     z-index: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
 .banner-title {
     color: #FFF;
     text-align: left;
     font-family: Ubuntu;
-    font-size: clamp(24px, 5vw, 36px);
+    font-size: clamp(28px, 5vw, 36px);
     font-style: normal;
     font-weight: 700;
-    line-height: normal;
+    line-height: 1.2;
     margin-bottom: 20px;
 }
 
@@ -271,7 +244,7 @@
     font-size: clamp(18px, 4vw, 25px);
     font-style: normal;
     font-weight: 300;
-    line-height: normal;
+    line-height: 1.4;
     max-width: 1100px;
     text-align: left;
 }
@@ -284,26 +257,27 @@
 .tour-title {
     color: #000;
     font-family: Ubuntu;
-    font-size: 33px;
+    font-size: clamp(24px, 5vw, 33px);
     font-style: normal;
     font-weight: 500;
-    line-height: normal;
+    line-height: 1.2;
     margin-bottom: 30px;
 }
 
 .tour-description {
     color: #000;
     font-family: Ubuntu;
-    font-size: 25px;
+    font-size: clamp(18px, 4vw, 25px);
     font-style: normal;
     font-weight: 300;
-    line-height: normal;
+    line-height: 1.4;
     margin-bottom: 40px;
 }
 
 .tour-image {
     width: 100%;
-    height: 100%;
+    height: auto;
+    min-height: 300px;
     object-fit: cover;
     border-radius: 6px;
 }
@@ -314,17 +288,12 @@
 }
 
 .learn-more-title {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    justify-content: center;
-    flex-shrink: 0;
     color: #000;
     font-family: Ubuntu;
     font-size: clamp(24px, 5vw, 33px);
     font-style: normal;
     font-weight: 500;
-    line-height: normal;
+    line-height: 1.2;
     margin-bottom: 30px;
     text-align: left;
 }
@@ -335,17 +304,16 @@
     font-size: clamp(18px, 4vw, 25px);
     font-style: normal;
     font-weight: 300;
-    line-height: normal;
+    line-height: 1.4;
     margin-bottom: 40px;
     text-align: left;
-    max-width: 1331px;
 }
 
 .bhf-button {
     display: flex;
     width: 100%;
     max-width: 468px;
-    padding: 1rem;
+    padding: 1.25rem;
     border-radius: 7px;
     background: #EBC56A;
     margin: 0 auto;
@@ -363,12 +331,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-}
-
-.bhf-button:hover {
-    background: #e0b85d;
-    color: #000;
-    text-decoration: none;
+    white-space: normal;
 }
 
 .explore-section {
@@ -440,18 +403,25 @@
     padding: 1rem 0;
 }
 
+.accordion-body .row {
+    --bs-gutter-x: 1rem;
+}
+
 .image-container {
     position: relative;
     width: 100%;
-    max-width: 265.006px;
-    aspect-ratio: 265/240;
-    margin: 0 auto;
+    padding-top: 100%;
+    margin-bottom: 1rem;
 }
 
 .image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 6px;
 }
 
 .image-overlay {
@@ -460,33 +430,96 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.45);
     display: flex;
     justify-content: center;
     align-items: center;
+    background: rgba(84, 95, 113, 0.84);
+    border-radius: 6px;
+    padding: 5%;
 }
 
 .overlay-text {
     color: #FFF;
     text-align: center;
     font-family: Ubuntu;
-    font-size: 28px;
+    font-size: min(max(14px, 4cqi), 24px);
     font-style: normal;
     font-weight: 500;
-    line-height: normal;
+    line-height: 1.2;
+    margin: 0;
+    width: 90%;
+    word-wrap: break-word;
 }
 
 @media (max-width: 768px) {
+    .accordion-body .col-6 {
+        width: 100%;
+    }
+    
+    .accordion-body .row .row {
+        --bs-gutter-x: 0.5rem;
+    }
+    
+    .accordion-body .col-6 .row .col-6 {
+        width: 50%;
+    }
+    
     .banner-overlay {
         position: relative;
         border-radius: 0;
+        padding: 2rem 1rem;
+    }
+    
+    .banner-image {
+        min-height: 300px;
+    }
+    
+    .footer-bottom {
+        padding: 2rem 1rem;
     }
 
     .footer-bottom [class*="col-"] {
         margin-bottom: 2rem;
     }
 
+    .footer-bottom [class*="col-"]:last-child {
+        margin-bottom: 0;
+    }
+
+    .footer-links a,
+    .useful-links-container a,
+    .contact-links a {
+        line-height: 2.5;
+    }
+
     .image-container {
-        margin-bottom: 1rem;
+        padding-top: 75%;
+    }
+    
+    .image-overlay {
+        padding: 3%;
+    }
+
+    .overlay-text {
+        font-size: min(max(14px, 4.5cqi), 24px);
+    }
+
+    .tour-section,
+    .learn-more-section {
+        padding: 40px 0;
+    }
+
+    .tour-image {
+        margin-top: 30px;
+    }
+
+    .bhf-button {
+        padding: 1rem;
+        width: 90%;
+    }
+    
+    .social-media-container {
+        justify-content: center;
+        margin-top: 1rem;
     }
 }
